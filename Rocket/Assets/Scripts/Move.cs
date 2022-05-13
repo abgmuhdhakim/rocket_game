@@ -25,6 +25,7 @@ public class Move : MonoBehaviour
     {
         ProcessBoost();
         ProcessRotate();
+        QuitApplication();
     }
 
     void ProcessBoost()
@@ -55,6 +56,13 @@ public class Move : MonoBehaviour
         }
     }
 
+    void QuitApplication()
+    {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
     void boosting()
     {
         rb.AddRelativeForce(Vector3.up * Time.deltaTime * thrust);
