@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class AutoMove : MonoBehaviour
 {
-    Vector3 startPosition;
+    Vector3 startPosition1;
     [SerializeField] Vector3 moveVector;
     [SerializeField] [Range(0,1)] float moveFactor;
     [SerializeField] float period = 2f;
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
+        startPosition1 = transform.position;
     }
 
     // Update is called once per frame
@@ -24,6 +24,6 @@ public class AutoMove : MonoBehaviour
 
         moveFactor = (rawSinWave + 1f) / 2f;
         Vector3 offset = moveVector * moveFactor;
-        transform.position = startPosition + offset;
+        transform.position = startPosition1 + offset;
     }
 }
