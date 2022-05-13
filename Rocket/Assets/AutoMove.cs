@@ -7,7 +7,7 @@ public class AutoMove : MonoBehaviour
     Vector3 startPosition;
     [SerializeField] Vector3 moveVector;
     [SerializeField] [Range(0,1)] float moveFactor;
-    [SerializeField] float period = 2f;
+    [SerializeField] float period = 10f;
     // Start is called before the first frame update
     void Start()
     {
