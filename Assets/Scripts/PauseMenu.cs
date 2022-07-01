@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuGui;
 
     public GameObject controlMenuGui;
+
+    public GameObject pressGui;
     void Start()
     {
         Resume();
@@ -36,12 +38,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenuGui.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        pressGui.SetActive(true);
     }
 
     public void Pause()
     {
         controlMenuGui.SetActive(false);
         pauseMenuGui.SetActive(true);
+        pressGui.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
         onControl = false;
